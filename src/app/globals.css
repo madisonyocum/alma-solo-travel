@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Alma Solo Travel — design tokens
+   Warm cream dominant, olive + terracotta used sparingly for emphasis.
+   No pure black / pure white as primary colours.
+--------------------------------------------------------------------------- */
+
+:root {
+  --background: #f4f0e8;
+  --surface: #fbf8f2;
+  --paper: #fffdf8;
+  --ink: #25251f;
+  --muted-ink: #66645d;
+  --olive: #a44a0c;
+  --deep-olive: #5A8D96;
+  --terracotta: #b96f50;
+  --sand: #d9c7ad;
+  --sun-washed-yellow: #c9a33c;
+  --azure: #3d7d94;
+  --border: rgba(37, 37, 31, 0.18);
+  --border-strong: rgba(37, 37, 31, 0.32);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted-ink: var(--muted-ink);
+  --color-olive: var(--olive);
+  --color-deep-olive: var(--deep-olive);
+  --color-terracotta: var(--terracotta);
+  --color-sand: var(--sand);
+  --color-sun: var(--sun-washed-yellow);
+  --color-azure: var(--azure);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-xs: 30rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "kern", "liga";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.65;
+    letter-spacing: -0.01em; /* Manrope: slight optical tightening */
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.0; /* Cormorant Garamond: tight display line-height */
+    letter-spacing: -0.03em; /* Cormorant Garamond: display-size tracking */
+    color: var(--ink);
+  }
+
+  /* Visible, consistent focus states for keyboard users. */
+  :focus-visible {
+    outline: 2px solid var(--deep-olive);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--sand);
+    color: var(--ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Uppercase micro-label used across the site. */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+  }
+
+  /* Constrained editorial measure for readable body copy. */
+  .measure {
+    max-width: 62ch;
+  }
+
+  .measure-tight {
+    max-width: 46ch;
+  }
+
+  /* Animated underline for editorial text links. */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    padding-bottom: 2px;
+    transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-underline:hover {
+    background-size: 0 1px;
+  }
+}
+
+/* Hero date fields: hide the browser's native calendar/clear buttons so a
+   single leading icon represents the whole date range. Clicking the field
+   still opens the picker (via showPicker in HeroSearch). */
+.date-clean::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+.date-clean::-webkit-inner-spin-button,
+.date-clean::-webkit-clear-button {
+  display: none;
+}
+
+/* Slow, subtle hero image scale on load. */
+@keyframes heroZoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Section rhythm helper — generous vertical spacing. */
+.section {
+  padding-block: clamp(4rem, 7.5vw, 7.5rem);
+}
+
+/* Hide scrollbars on horizontal sliders while keeping keyboard scroll. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
