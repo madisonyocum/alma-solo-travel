@@ -27,7 +27,9 @@ export type DestinationTag =
   | "Wellness"
   | "Culture"
   | "Good value"
-  | "Luxury";
+  | "Luxury"
+  | "History"
+  | "Adventure";
 
 export interface StayArea {
   name: string;
