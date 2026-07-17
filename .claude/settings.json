@@ -67,7 +67,14 @@
       "Bash(awk -F: '$1 > 1758 && $1 < 1825')",
       "Bash(awk -F: '$1 > 1699 && $1 < 1760')",
       "Bash(gh repo *)",
-      "Bash(node -e \"console.log\\(require\\('./package.json'\\).dependencies.next\\)\")"
+      "Bash(node -e \"console.log\\(require\\('./package.json'\\).dependencies.next\\)\")",
+      "Bash(gh api *)",
+      "Bash(gh search *)",
+      "Bash(git config *)",
+      "Bash(dig +short CNAME www.almasolotravel.com)",
+      "Bash(dig +short TXT _railway-verify.www.almasolotravel.com)",
+      "Bash(dig +short CNAME www.almasolotravel.com @ns37.domaincontrol.com)",
+      "Bash(dig +short TXT _railway-verify.www.almasolotravel.com @ns37.domaincontrol.com)"
     ],
     "additionalDirectories": [
       "/Users/madison/alma-solo-travel/public/fonts"
