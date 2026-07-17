@@ -232,9 +232,9 @@ export function EnquiryForm({
                       className={cn(
                         "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition-colors",
                         done
-                          ? "border-sun bg-sun text-deep-olive"
+                          ? "border-white bg-white text-azure"
                           : current
-                            ? "border-surface bg-surface text-deep-olive"
+                            ? "border-surface/50 bg-surface/50 text-deep-olive"
                             : "border-surface/30 bg-transparent text-surface/40",
                       )}
                     >

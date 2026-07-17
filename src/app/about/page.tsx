@@ -85,6 +85,8 @@ export default function AboutPage() {
               imageClassName="shrink"
             >
               <p>
+                I&apos;m a product designer from America who moved to Edinburgh,
+                Scotland, and have solo travelled to 30+ countries along the way.
                 After years of travelling independently and building a life abroad,
                 I know how freeing solo travel can feel, and how quickly the planning
                 can become overwhelming. The endless tabs, the second-guessing, the
@@ -94,7 +96,7 @@ export default function AboutPage() {
                 Alma combines my love of travel, design and discovering the places
                 that make a destination memorable: the right neighbourhood, the
                 quietly brilliant hotel, the café you return to twice and the
-                experiences that help you feel connected rather than simply
+                experiences that heclp you feel connected rather than simply
                 entertained.
               </p>
               <p>

@@ -13,7 +13,7 @@ import { articles } from "@/data/articles";
 import { serviceTiers } from "@/data/services";
 import { images } from "@/data/images";
 import Image from "next/image";
-import { ClipboardList, Map, Plane } from "lucide-react";
+import { ArrowRight, ClipboardList, Map, Plane } from "lucide-react";
 import { CyclingVideoHero } from "@/components/CyclingVideoHero";
 
 const howItWorks = [
@@ -164,6 +164,7 @@ export default function HomePage() {
                 <div>
                   <Button href="/enquire" variant="light">
                     Plan Your Trip
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </Button>
                 </div>
               </Reveal>

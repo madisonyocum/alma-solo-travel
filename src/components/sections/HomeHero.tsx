@@ -41,7 +41,9 @@ export function HomeHero() {
           </h1>
 
           <p className="mt-8 w-full max-w-2xl text-lg text-surface/90">
-            Alma builds personalised solo travel plans for women who are done waiting, so you can stop researching and actually go.
+            Alma builds personalised solo travel plans for women who are done waiting,
+            <br />
+            so you can stop researching and actually go.
           </p>
 
           <div className="mt-10 w-full max-w-4xl text-left">
