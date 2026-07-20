@@ -42,7 +42,7 @@ export function HomeHero() {
 
           <p className="mt-8 w-full max-w-2xl text-lg text-surface/90">
             Alma builds personalised solo travel plans for women who are done waiting,
-            <br />
+            <br className="hidden sm:block" />
             so you can stop researching and actually go.
           </p>
 

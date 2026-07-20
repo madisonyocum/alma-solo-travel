@@ -151,11 +151,11 @@ export default function HowItWorksPage() {
                           <p className="font-sans text-[0.6rem] font-semibold uppercase tracking-widest text-muted-ink">{entry.day}</p>
                           <span className="rounded-full bg-olive/10 px-2 py-0.5 font-sans text-[0.6rem] font-semibold uppercase tracking-wider text-olive">{entry.tag}</span>
                         </div>
-                        <p className="font-serif text-sm text-ink">{entry.title}</p>
+                        <p className="font-serif text-lg text-ink">{entry.title}</p>
                         <p className="font-sans text-xs text-muted-ink italic">{entry.place}</p>
                         <ul className="mt-1.5 flex flex-col gap-1">
                           {entry.items.map((item) => (
-                            <li key={item} className="flex items-center gap-2 font-sans text-xs text-muted-ink">
+                            <li key={item} className="flex items-center gap-2 font-sans text-sm text-muted-ink">
                               <span className="h-px w-3 shrink-0 bg-border-strong" aria-hidden="true" />
                               {item}
                             </li>

@@ -74,7 +74,16 @@
       "Bash(dig +short CNAME www.almasolotravel.com)",
       "Bash(dig +short TXT _railway-verify.www.almasolotravel.com)",
       "Bash(dig +short CNAME www.almasolotravel.com @ns37.domaincontrol.com)",
-      "Bash(dig +short TXT _railway-verify.www.almasolotravel.com @ns37.domaincontrol.com)"
+      "Bash(dig +short TXT _railway-verify.www.almasolotravel.com @ns37.domaincontrol.com)",
+      "Bash(curl -sIL http://almasolotravel.com --max-time 10)",
+      "Bash(curl -sIL https://almasolotravel.com --max-time 10)",
+      "Bash(openssl s_client -connect almasolotravel.com:443 -servername almasolotravel.com)",
+      "Bash(openssl x509 *)",
+      "Bash(curl -s -X GET https://almasolotravel.com --max-time 10 -D - -o /tmp/body.html)",
+      "Bash(curl -sIL http://www.almasolotravel.com --max-time 10)",
+      "Bash(curl -sIL https://www.almasolotravel.com --max-time 10)",
+      "Bash(lsof -nP -iTCP -sTCP:LISTEN)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000 --max-time 5)"
     ],
     "additionalDirectories": [
       "/Users/madison/alma-solo-travel/public/fonts"
